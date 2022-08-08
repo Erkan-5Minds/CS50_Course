@@ -2,7 +2,6 @@
 #include <cs50.h>
 #include <math.h>
 
-// q -25c, d -10c, n-5c, p -1c
 
 int main(void)
 {
