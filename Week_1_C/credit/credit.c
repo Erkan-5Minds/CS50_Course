@@ -40,12 +40,14 @@ int main(void)
             multSum = multSum + doubleDigit[m];
         }
     }
+
     int nonMultSum = 0;    
     for (int k = cardLength - 1; k >= 0; k -= 2)
     {
         int nonDoubleDigit = cardDigits[k];
         nonMultSum = nonMultSum + nonDoubleDigit;
-    }    
+    }
+        
     if ((multSum + nonMultSum) % 10 == 0)
     {        
         switch(cardDigits[0])
