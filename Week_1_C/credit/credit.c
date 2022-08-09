@@ -1,8 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
-long long cardNumber = 0;
+long cardNumber = 0;
 
 int main(void)
 {
@@ -10,19 +11,19 @@ int main(void)
     do
     {    
         printf("Beep Boop. Enter your credit card number here: ");
-        cardNumber = get_long_long();        
+        cardNumber = get_long("");        
     }
     while (cardNumber <= 0);
     
-    long long cardLength = floor(log10(llabs(cardNumber))) + 1;
-    long long cardDigits[cardLength];
+    long cardLength = floor(log10(llabs(cardNumber))) + 1;
+    long cardDigits[cardLength];
     for (int i = (cardLength - 1); i >= 0; i--) 
     {
         cardDigits[i] = cardNumber % 10;
         cardNumber = floor(cardNumber / 10);        
     }    
 
-    long long doubleDigit[cardLength];
+    long doubleDigit[cardLength];
     for (int j = (cardLength - 2), l = 0; j >= 0; j -= 2, l++)
     {
         doubleDigit[l] = cardDigits[j] * 2;
@@ -47,7 +48,7 @@ int main(void)
         int nonDoubleDigit = cardDigits[k];
         nonMultSum = nonMultSum + nonDoubleDigit;
     }
-        
+
     if ((multSum + nonMultSum) % 10 == 0)
     {        
         switch(cardDigits[0])
@@ -56,25 +57,28 @@ int main(void)
                 if(cardDigits[1] == 4 || cardDigits[1] == 7)
                 {
                     printf("AMEX\n");
+                    return 0;
                 }
                 break;
 
             case 4:
                 printf("VISA\n");
+                return 0;
                 break;
          
             case 5:
                 if (cardDigits[1] == 1 || cardDigits[1] == 2 || cardDigits[1] == 3 || cardDigits[1] == 4 || cardDigits[1] == 5)
                 {
                     printf("MASTERCARD\n");
+                    return 0;
                 }
                 break;
         }
     }
-    else
-    {        
-        printf("INVALID\n");
-    }    
+    
+           
+    printf("INVALID\n");
+        
 
-    return 0;
+    return 1;
 }
