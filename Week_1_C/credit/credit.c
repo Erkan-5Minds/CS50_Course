@@ -7,7 +7,6 @@ long cardNumber = 0;
 
 int main(void)
 {
-    
     do
     {    
         printf("Beep Boop. Enter your credit card number here: ");
