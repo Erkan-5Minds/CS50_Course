@@ -9,7 +9,7 @@ int main(void)
 
     int letters = 0;
     int words = 0; 
-    int senteces = 0;
+    int sentences = 0;
 
     for (int i = 0; i <strlen(text); i++)
     {
@@ -23,11 +23,11 @@ int main(void)
         }
         else if (text[i] == '.' || text[i] == '?'||text[i] == '!')
         {
-            senteces++;
+            sentences++;
         }        
     }
     float L = (float)letters / (float) words * 100;
-    float S = (float)senteces / (float)words * 100;
+    float S = (float)sentences / (float)words * 100;
 
     int index = (0.0588 * L - 0.296 * S - 15.8);
 
