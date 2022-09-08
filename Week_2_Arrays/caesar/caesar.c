@@ -17,25 +17,25 @@ int main(int argc, string argv[])
         if (!isdigit(argv[1][i]))
         printf("usage: ./caesar key");
     }   
-        int k = atoi(argv[1]);       
-        string plaintext = get_string("Plaintext: ");
-        printf("Ciphertext ");
+    int k = atoi(argv[1]);       
+    string plaintext = get_string("Plaintext: ");
+    printf("Ciphertext ");
 
-        for (int j = 0; j < strlen(plaintext); j++)
+    for (int j = 0; j < strlen(plaintext); j++)
+    {
+        if (isupper(plaintext[j]))
         {
-            if (isupper(plaintext[j]))
-            {
-                printf("%c", (plaintext[j] - 'A' + k ) % 26 + 'A');
-            }
-            else if (islower(plaintext[j]))
-            {
-                printf("%c", (plaintext[j] - 'a' + k ) % 26 + 'a');
-            }
-            
-            else
-            {
-                printf("%c", plaintext[j]);
-            }
+            printf("%c", (plaintext[j] - 'A' + k ) % 26 + 'A');
         }
-        printf("\n");
+        else if (islower(plaintext[j]))
+        {
+            printf("%c", (plaintext[j] - 'a' + k ) % 26 + 'a');
+        }
+        
+        else
+        {
+            printf("%c", plaintext[j]);
+        }
+    }
+    printf("\n");
  }
