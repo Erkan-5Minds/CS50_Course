@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "getopt.h": "c",
+        "helpers.h": "c",
+        "stdlib.h": "c"
+    }
+}
