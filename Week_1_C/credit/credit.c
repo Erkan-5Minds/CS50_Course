@@ -74,10 +74,7 @@ int main(void)
                 break;
         }
     }
-    
-           
+               
     printf("INVALID\n");
-        
-
     return 1;
 }

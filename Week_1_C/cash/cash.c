@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 #include <math.h>
+
 int main(void)
 {
     float change; 
@@ -26,7 +27,6 @@ int main(void)
         coins++;
     }
     
-
     while (convertCents >= 5) 
     {
         convertCents = convertCents - 5;
