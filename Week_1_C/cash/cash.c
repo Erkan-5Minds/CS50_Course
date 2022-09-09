@@ -20,7 +20,6 @@ int main(void)
         coins++;
     }
     
-
     while (convertCents >= 10) 
     {
         convertCents = convertCents - 10;
