@@ -66,7 +66,8 @@ int main(void)
                 break;
          
             case 5:
-                if (cardDigits[1] == 1 || cardDigits[1] == 2 || cardDigits[1] == 3 || cardDigits[1] == 4 || cardDigits[1] == 5)
+                bool isCardMastercard = cardDigits[1] == 1 || cardDigits[1] == 2 || cardDigits[1] == 3 || cardDigits[1] == 4 || cardDigits[1] == 5;
+                if (isCardMastercard)
                 {
                     printf("MASTERCARD\n");
                     return 0;
