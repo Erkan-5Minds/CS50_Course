@@ -16,7 +16,8 @@ int main(int argc, string argv[])
     {
         if (!isdigit(argv[1][i]))
         printf("usage: ./caesar key");
-    }   
+    }
+
     int k = atoi(argv[1]);       
     string plaintext = get_string("Plaintext: ");
     printf("Ciphertext ");
@@ -31,7 +32,6 @@ int main(int argc, string argv[])
         {
             printf("%c", (plaintext[j] - 'a' + k ) % 26 + 'a');
         }
-        
         else
         {
             printf("%c", plaintext[j]);
