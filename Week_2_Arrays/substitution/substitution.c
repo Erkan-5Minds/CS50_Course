@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+
 bool is_valid_key(string s);
 int main(int argc, string argv[])
 {
@@ -58,8 +59,8 @@ bool is_valid_key(string s)
         {
             return false;
         }
-        
         freq[index]++;
     }
+
     return true;
 }
