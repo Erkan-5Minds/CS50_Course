@@ -22,7 +22,6 @@ int main(void)
     }
 }
 
-
 int get_positive_int(string prompt) 
 {
     int number;
@@ -30,6 +29,7 @@ int get_positive_int(string prompt)
     {
         number = get_int("%s", prompt);
     }
-    while (number < 1 || number > 8); 
+    while (number < 1 || number > 8);
+    
     return number;
 }
