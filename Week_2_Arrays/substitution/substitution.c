@@ -53,12 +53,14 @@ bool is_valid_key(string s)
         {
             return false;
         }
+        
         int index = toupper(s[i]) - 'A';
         
         if (freq[index] > 0)
         {
             return false;
         }
+
         freq[index]++;
     }
 
