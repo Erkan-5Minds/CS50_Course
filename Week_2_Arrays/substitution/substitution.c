@@ -58,6 +58,7 @@ bool is_valid_key(string s)
         {
             return false;
         }
+        
         freq[index]++;
     }
     return true;
