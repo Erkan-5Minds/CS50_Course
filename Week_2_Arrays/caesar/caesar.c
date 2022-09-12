@@ -15,7 +15,9 @@ int main(int argc, string argv[])
     for (int i = 0; i < strlen (argv[1]); i++)
     {
         if (!isdigit(argv[1][i]))
-        printf("usage: ./caesar key");
+        {
+            printf("usage: ./caesar key");
+        }
     }
 
     int k = atoi(argv[1]);       
