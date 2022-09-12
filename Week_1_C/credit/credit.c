@@ -53,7 +53,8 @@ int main(void)
         switch(cardDigits[0])
         {
             case 3:
-                if(cardDigits[1] == 4 || cardDigits[1] == 7)
+                bool isCardAMEX = cardDigits[1] == 4 || cardDigits[1] == 7;
+                if (isCardAMEX)
                 {
                     printf("AMEX\n");
                     return 0;
