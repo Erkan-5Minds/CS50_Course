@@ -48,35 +48,35 @@ int main(void)
         nonMultSum = nonMultSum + nonDoubleDigit;
     }
 
-    if ((multSum + nonMultSum) % 10 == 0)
+    if ((multSum + nonMultSum) % 10 != 0)
     {        
-        switch(cardDigits[0])
-        {
-            case 3:
-                bool isCardAMEX = cardDigits[1] == 4 || cardDigits[1] == 7;
-                if (isCardAMEX)
-                {
-                    printf("AMEX\n");
-                    return 0;
-                }
-                break;
-
-            case 4:
-                printf("VISA\n");
-                return 0;
-                break;
-         
-            case 5:
-                bool isCardMastercard = cardDigits[1] == 1 || cardDigits[1] == 2 || cardDigits[1] == 3 || cardDigits[1] == 4 || cardDigits[1] == 5;
-                if (isCardMastercard)
-                {
-                    printf("MASTERCARD\n");
-                    return 0;
-                }
-                break;
-        }
+        printf("INVALID\n");
+        return 1;
     }
                
-    printf("INVALID\n");
-    return 1;
+    switch(cardDigits[0])
+    {
+        case 3:
+            bool isCardAMEX = cardDigits[1] == 4 || cardDigits[1] == 7;
+            if (isCardAMEX)
+            {
+                printf("AMEX\n");
+                return 0;
+            }
+            break;
+
+        case 4:
+            printf("VISA\n");
+            return 0;
+            break;
+        
+        case 5:
+            bool isCardMastercard = cardDigits[1] == 1 || cardDigits[1] == 2 || cardDigits[1] == 3 || cardDigits[1] == 4 || cardDigits[1] == 5;
+            if (isCardMastercard)
+            {
+                printf("MASTERCARD\n");
+                return 0;
+            }
+            break;
+    }
 }
