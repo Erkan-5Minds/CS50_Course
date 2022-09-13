@@ -53,11 +53,11 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-    bool CandidateIsCandidateToVote = strcmp(name, candidates[i].name) == 0;
-    if (CandidateIsCandidateToVote)
+        bool CandidateIsCandidateToVote = strcmp(name, candidates[i].name) == 0;
+        if (CandidateIsCandidateToVote) 
         {
-        candidates[i].votes += 1;
-        return true;  
+            candidates[i].votes += 1;
+            return true;  
         }
     }
     
