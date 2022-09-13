@@ -1,7 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-
 #define MAX 9
 
 typedef struct
@@ -29,6 +28,7 @@ int main(int argc, string argv[])
         printf("Maximum number of candidates is %i\n", MAX);
         return 2;
     }
+    
     for (int i = 0; i < candidate_count; i++)
     {
         candidates[i].name = argv[i + 1];
@@ -75,6 +75,7 @@ void print_winner(void)
         }
         
     }
+
     for (int i = 0; i < candidate_count ; i++)
     {
        if (candidates[i].votes == max_vote)
