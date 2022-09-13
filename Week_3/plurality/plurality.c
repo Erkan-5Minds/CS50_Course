@@ -26,6 +26,7 @@ int main(int argc, string argv[])
     if (candidate_count > MAX)
     {
         printf("Maximum number of candidates is %i\n", MAX);
+        
         return 2;
     }
     
