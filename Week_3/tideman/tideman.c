@@ -162,7 +162,7 @@ void lock_pairs(void)
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
-    
+
     return;
 }
 
@@ -182,10 +182,12 @@ void print_winner(void)
         }
 
         if (isLoser) continue;
+        
         if(!isLoser) 
         {
             printf("%s\n", candidates[i]);
         }
     }
+
     return;
 }
