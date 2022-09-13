@@ -129,7 +129,7 @@ void add_pairs(void)
             }
         }
     }
-    
+
     return;
 }
 
@@ -139,7 +139,8 @@ void sort_pairs(void)
     {
         int max = i;
         for (int j = i + 1; j < pair_count; j++) {
-            if (preferences[pairs[j].winner][pairs[j].loser] > preferences[pairs[max].winner][pairs[max].loser])
+        bool currentPairIsGreater= preferences[pairs[j].winner][pairs[j].loser] > preferences[pairs[max].winner][pairs[max].loser];
+            if (currentPairIsGreater)
             {
                 max = j;
             }
@@ -148,6 +149,7 @@ void sort_pairs(void)
         pairs[i] = pairs[max];
         pairs[max] = temp;
     }
+
     return;
 }
 
