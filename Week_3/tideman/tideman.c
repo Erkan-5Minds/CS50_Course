@@ -182,7 +182,7 @@ void print_winner(void)
         }
 
         if (isLoser) continue;
-        
+
         if(!isLoser) 
         {
             printf("%s\n", candidates[i]);
