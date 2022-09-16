@@ -40,7 +40,6 @@ int main(int argc, string argv[])
     for (int i = 0; i < voter_count; i++)
     {
         string name = get_string("Vote: ");
-
         if (!vote(name))
         {
             printf("Invalid vote.\n");
@@ -58,6 +57,7 @@ bool vote(string name)
         if (CandidateIsCandidateToVote) 
         {
             candidates[i].votes += 1;
+            
             return true;  
         }
     }
@@ -73,8 +73,7 @@ void print_winner(void)
         if (candidates[i].votes > max_vote)
         {
             max_vote = candidates[i].votes;            
-        }
-        
+        }     
     }
 
     for (int i = 0; i < candidate_count ; i++)
@@ -83,6 +82,7 @@ void print_winner(void)
        {
         printf("%s\n", candidates[i].name);
        }       
-    }    
+    }
+       
     return;
 }
