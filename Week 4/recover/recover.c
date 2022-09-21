@@ -10,12 +10,14 @@ int main(int argc, char *argv[])
         printf("Usage: .recover IMAGE\n");
         return 1;
     }
+
     FILE *input_file = fopen(argv[1], "r");
     if (input_file == NULL)
     {
         printf("Could not open file");
         return 2;
     }
+
     unsigned char buffer[512];
     int count_image = 0;
     FILE *output_file = NULL;
@@ -29,6 +31,7 @@ int main(int argc, char *argv[])
             output_file = fopen(filename, "w");
             count_image++;
         }
+        
         if (output_file != NULL)
         {
             fwrite(buffer, sizeof(char), 512, output_file);
