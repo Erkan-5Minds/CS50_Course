@@ -1,8 +1,8 @@
 # TODO
 
 def hello():
-    input("What is your name? ")
-    print("Hello! "(input))
+    name = input("What is your name? ")
+    print("Hello! ",(name))
 
 if __name__ == "__main__":
     hello()
