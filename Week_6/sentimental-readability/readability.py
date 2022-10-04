@@ -21,14 +21,13 @@ while True:
                 sentences += 1
             else:
                 special += 1
-                
+
         L = float(alphabets / words * 100)
 
         S = float(sentences / words * 100)
 
         index = round((float)(0.0588 * L - 0.296 * S - 15.8))
-
-        # Output
+        
         if (index >= 16):
             print('Grade 16+')
         elif (index < 1):
