@@ -9,6 +9,7 @@ while True:
     special = 0
     words = 1
     sentences = 0
+    
     if (str):
         for i in range(len(str)):
             if (str[i].isalpha()):
