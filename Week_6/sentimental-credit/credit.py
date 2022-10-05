@@ -6,7 +6,7 @@ def main():
     validate_card(credit_card)
 
 
-def get_card_num():
+def get_card_num()->int:
     while True:
         card_num = input("Beep Boop. Enter your credit card number here: ")
         try:
@@ -18,7 +18,7 @@ def get_card_num():
     return card_num
 
 
-def validate_card(credit_card):
+def validate_card(credit_card: int):
     if len(credit_card) < 13 or 16 < len(credit_card):
         print("INVALID")
         sys.exit(0)
