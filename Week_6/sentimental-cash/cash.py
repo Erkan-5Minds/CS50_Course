@@ -24,5 +24,6 @@ def main():
     
     print(f"%d\n", coins)
     
+if __name__ == "__main__":
     main()
     
