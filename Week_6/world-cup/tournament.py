@@ -32,7 +32,6 @@ def main():
 
 
 def simulate_game(team1, team2):
-    """Simulate a game. Return True if team1 wins, False otherwise."""
     rating1 = team1["rating"]
     rating2 = team2["rating"]
     probability = 1 / (1 + 10 ** ((rating2 - rating1) / 600))
@@ -41,7 +40,6 @@ def simulate_game(team1, team2):
 
 
 def simulate_round(teams):
-    """Simulate a round. Return a list of winning teams."""
     winners = []
 
     for i in range(0, len(teams), 2):
@@ -59,7 +57,6 @@ def simulate_tournament(teams):
         
         teams = simulate_round(teams)
     return teams[0]["team"]
-
 
 if __name__ == "__main__":
     main()
