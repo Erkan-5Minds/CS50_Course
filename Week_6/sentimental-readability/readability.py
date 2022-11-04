@@ -2,7 +2,7 @@ import cs50
 
 def main():
     while True:
-        str = cs50.get_string('Text: ')
+        input = cs50.get_string('Text: ')
         index = 0
         i = 0
         alphabets = 0
@@ -11,15 +11,15 @@ def main():
         words = 1
         sentences = 0
         
-        if (str):
-            for i in range(len(str)):
-                if (str[i].isalpha()):
+        if (input):
+            for i in range(len(input)):
+                if (input[i].isalpha()):
                     alphabets += 1
-                elif (str[i].isnumeric()):
+                elif (input[i].isnumeric()):
                     digits += 1
-                elif (str[i] == ' ' and str[i + 1]):
+                elif (input[i] == ' ' and input[i + 1]):
                     words += 1
-                elif (str[i] == '?' or str[i] == '!' or str[i] == '.'):
+                elif (input[i] == '?' or input[i] == '!' or input[i] == '.'):
                     sentences += 1
                 else:
                     special += 1

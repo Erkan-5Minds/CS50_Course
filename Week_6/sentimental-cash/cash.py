@@ -1,27 +1,27 @@
 def main():
     try:
-      change = int(input("How much change is owed: "))
+       change = int(input("How much change is owed: "))
     except change < 0:
-      print("Error change has to be greater then 0!")
+      print("Error: Change has to be greater then 0!")
       exit()
 
-    convertCents = round(change * 100)
+    convert_cents = round(change * 100)
     coins = 0
 
-    while convertCents >= 25:
-        convertCents = convertCents - 25
+    while convert_cents >= 25:
+        convert_cents = convert_cents - 25
         coins += 1
     
-    while convertCents >= 10:
-        convertCents = convertCents - 10
+    while convert_cents >= 10:
+        convert_cents = convert_cents - 10
         coins += 1
     
-    while convertCents >= 5:
-        convertCents = convertCents - 5
+    while convert_cents >= 5:
+        convertCents = convert_cents - 5
         coins += 1
     
-    while convertCents >= 1:
-        convertCents = convertCents - 1
+    while convert_cents >= 1:
+        convert_cents = convert_cents - 1
         coins += 1
     
     print(coins)
