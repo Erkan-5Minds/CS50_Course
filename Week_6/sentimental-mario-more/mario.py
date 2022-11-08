@@ -7,7 +7,6 @@ def main():
         except:
             print("", end="")
 
-    spaces = 1
     for j in range(height):
         for spaces in range(height - j - 1):
             print(" ", end="")
