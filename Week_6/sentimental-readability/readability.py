@@ -4,7 +4,6 @@ def main():
     while True:
         input = cs50.get_string('Text: ')
         index = 0
-        i = 0
         alphabets = 0
         digits = 0
         special = 0

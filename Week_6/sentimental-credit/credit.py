@@ -5,7 +5,7 @@ def main():
 
     validate_card(credit_card)
 
-def get_card_num()->int:
+def get_card_num() -> int:
     while True:
         card_num = input("Beep Boop. Enter your credit card number here: ")
         try:

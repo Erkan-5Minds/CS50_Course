@@ -17,7 +17,7 @@ def main():
         coins += 1
     
     while convert_cents >= 5:
-        convertCents = convert_cents - 5
+        convert_cents = convert_cents - 5
         coins += 1
     
     while convert_cents >= 1:
